@@ -1,0 +1,5 @@
+D:\Posao\NEURALAB\Net-Neuralab-Utilities\bin\Debug\Net-Neuralab-Utilities.dll
+D:\Posao\NEURALAB\Net-Neuralab-Utilities\bin\Debug\Net-Neuralab-Utilities.pdb
+D:\Posao\NEURALAB\Net-Neuralab-Utilities\obj\Debug\ResolveAssemblyReference.cache
+D:\Posao\NEURALAB\Net-Neuralab-Utilities\obj\Debug\Net-Neuralab-Utilities.dll
+D:\Posao\NEURALAB\Net-Neuralab-Utilities\obj\Debug\Net-Neuralab-Utilities.pdb
