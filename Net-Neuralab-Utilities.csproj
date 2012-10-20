@@ -45,6 +45,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextStringUtils.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Net-Neuralab-Utilities.dll" />
+    <Content Include="bin\Debug\Net-Neuralab-Utilities.pdb" />
+    <Content Include="obj\Debug\Net-Neuralab-Utilities.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Net-Neuralab-Utilities.dll" />
+    <Content Include="obj\Debug\Net-Neuralab-Utilities.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
