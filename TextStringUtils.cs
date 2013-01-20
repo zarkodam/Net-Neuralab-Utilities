@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Net_Neuralab_Utilities
+namespace net.neuralab.utilities
 {
-    class TextStringUtils
+    public static class TextStringUtils
     {
         //Static method will generate a random string in given length from hardcoded dictionary//////////////////////////////////////
 

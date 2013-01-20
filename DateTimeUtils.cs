@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Net_Neuralab_Utilities
+namespace net.neuralab.utilities
 {
-    class DateTimeUtils
+    public static class DateTimeUtils
     {
         //Check if given year is a leap year//////////////////////////////////////////////////////////////////////
 

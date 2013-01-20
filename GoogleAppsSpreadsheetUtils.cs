@@ -6,9 +6,9 @@ using Google.GData.Client;
 using Google.GData.Spreadsheets;
 using System.Collections;
 
-namespace Net_Neuralab_Utilities
+namespace net.neuralab.utilities
 {
-    class GoogleAppsSpreadsheetUtils
+    public static class GoogleAppsSpreadsheetUtils
     {
         //Fetch all Spreadsheets
 

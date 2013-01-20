@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Net_Neuralab_Utilities
+namespace net.neuralab.utilities
 {
-    class MathAndNumbersUtils
+    public static class MathAndNumbersUtils
     {
         public static string roundedTwoDecimalPlacesString(string decNum)
         {
