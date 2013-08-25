@@ -3,21 +3,21 @@
   <Class Name="Net_Neuralab_Utilities.DateTimeUtils">
     <Position X="10" Y="1.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAQAAAAAAAAAAAAAEAAAAAAAQAA=</HashCode>
+      <HashCode>AAAAAAAABBAAAAAAAAQAAAAAAAAAAAAAEAAAAAAAQAA=</HashCode>
       <FileName>DateTimeUtils.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Net_Neuralab_Utilities.MathAndNumbersUtils">
     <Position X="5.5" Y="1.5" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MathAndNumbersUtils.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Net_Neuralab_Utilities.TextStringUtils">
     <Position X="0.5" Y="1.5" Width="3.75" />
     <TypeIdentifier>
-      <HashCode>AAABAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAEAAAA=</HashCode>
+      <HashCode>AAABAAACAIAAAAAAAAAAAAAAAAAAAAAAAAAQAAEAAAA=</HashCode>
       <FileName>TextStringUtils.cs</FileName>
     </TypeIdentifier>
   </Class>

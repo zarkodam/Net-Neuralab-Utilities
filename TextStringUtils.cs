@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -16,12 +17,10 @@ namespace Net_Neuralab_Utilities
 
             Random random = new Random();
 
-            string key = new string(
+            return new string(
                         Enumerable.Repeat(dictionary, length) // Numbers are possible values //
                                   .Select(s => s[random.Next(s.Length)])
                                   .ToArray());
-
-            return key;
         }
 
 
@@ -72,11 +71,8 @@ namespace Net_Neuralab_Utilities
             return rand;
         }
 
-
-
-
+        
         //Method checks if given string is valid VAT number. Tested for Croatian usage////////////////////////////////////
-
         public static bool checkOIB(string oib)
         {
             if (oib.Length != 11) return false;
@@ -104,18 +100,19 @@ namespace Net_Neuralab_Utilities
         } 
 
 
-
-
         //Method checks if given straing is a valid email address///////////////////////////////////////////////////////////
-
+        //my implementation
+        private static Regex emailRegex = new Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*" + "@" + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$", RegexOptions.Compiled);
         public static bool checkEmailValidation(string emailToCheck)
         {
-            Regex regex = new Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*" + "@" + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
-
-            Match match = regex.Match(emailToCheck);
-
-            return match.Success;
+            return emailRegex.IsMatch(emailToCheck);
         }
 
+        //Method is used when you want to remove illegal characters from path or string because filename cannot contain question marks for example
+        //for example: RemoveIllegalCharacters("what is your name?") returns: what is your name
+        public static string RemoveIllegalCharacters(string text)
+        {
+            return Path.GetInvalidFileNameChars().Aggregate(text, (current, c) => current.Replace(c.ToString(), string.Empty));
+        }
     }
 }

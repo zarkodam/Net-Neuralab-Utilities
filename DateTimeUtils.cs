@@ -22,39 +22,35 @@ namespace Net_Neuralab_Utilities
             return true;
         }
 
+        //same as method above but original from Microsoft and more simplified
+        //DateTime.IsLeapYear(insertSomeYear)
 
-        //Method generates string for online date-dependant filenaming (usefull if you want to save large number of files online ... i.e. images, pdfs... that can be public)////////////////////////////////////////////
-
-        public static string generateStringFromDate()
+        //my implementation of method generates string for online date-dependant filenaming (usefull if you want to save large number of files online ... i.e. images, pdfs... that can be public)////////////////////////////////////////////
+        //usage: GenerateStringFromDate(" - ");
+        public static string StringFromDateTime(string dateStringSplitter)
         {
             DateTime dt = DateTime.Now;
-
-            string dts = dt.Year.ToString() + "x" + dt.Month.ToString() + "x" + dt.Day.ToString() + "x" + dt.Hour.ToString() + "x" + dt.Minute.ToString() + "x" + dt.Second.ToString() + "x" + dt.Millisecond.ToString();
-
-            return dts;
+            return string.Concat(dt.Year.ToString(), dateStringSplitter, dt.Month.ToString(), dateStringSplitter, dt.Day.ToString(), dateStringSplitter, dt.Hour.ToString(), dateStringSplitter, dt.Minute.ToString(), dateStringSplitter, dt.Second.ToString(), dateStringSplitter, dt.Millisecond.ToString());
         }
 
-
+        //Time handler method is used when you want to add 0 if minutes or seconds smaller then 10
+        //usage: TimeFormatHandler(1, 9) returns: 01:09
+        public static string TimeFormatHandler(double min, double sec)
+        {
+            return string.Concat((min < 10 ? "0" : ""), min, ":", (sec < 10 ? "0" : ""), sec);
+        }
 
         //UNIX time handlers // TO and FROM///////////////////////////////////////////////////////////////////////
 
+        private static readonly DateTime basicDate = new DateTime(1970, 1, 1, 0, 0, 0, 0);
         public static DateTime getDetTimeFromUNIXtime(int numberOfSeconds)
         {
-            DateTime basicDate = new DateTime(1970, 1, 1, 0, 0, 0, 0);
-            DateTime newDate = basicDate.AddSeconds(numberOfSeconds);
-
-            return newDate;
+            return basicDate.AddSeconds(numberOfSeconds);
         }
 
         public static int getUNIXtimeFromDateTime(DateTime dateTime)
         {
-            DateTime basicDate = new DateTime(1970, 1, 1, 0, 0, 0, 0);
-            DateTime newDate = dateTime;
-
-            TimeSpan ts = newDate.Subtract(basicDate);
-
-
-            return ts.Days * 24 * 60 * 60;
+            return dateTime.Subtract(basicDate).Days * 24 * 60 * 60;
         }
     }
 }

@@ -12,8 +12,18 @@ namespace Net_Neuralab_Utilities
         public static string roundedTwoDecimalPlacesString(string decNum)
         {
             decimal dn = decimal.Parse(decNum);
-
             return Math.Round(dn, 2).ToString();
         }
+
+        //This method is used when you want to add 0 if number is smaller them 10
+        //usage: OrderNumberHandler(8) returns: 08
+        public static string OrderNumberHandler(int numb)
+        {
+            if (numb <= 9)
+                return string.Concat("0", numb);
+            else
+                return numb.ToString();
+        }
+
     }
 }
